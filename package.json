@@ -8,9 +8,11 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.2",
     "@tailwindcss/forms": "^0.4.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
