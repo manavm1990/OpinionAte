@@ -5,3 +5,8 @@ dist-ssr
 *.local
 
 package-lock.json
+
+# Cypress
+screenshotsFolder
+videosFolder
+# TODO: Add cypress.json if it includes sensitive data
