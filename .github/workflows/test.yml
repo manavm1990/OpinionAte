@@ -1,0 +1,28 @@
+# Workflow name
+name: Test
+
+on: [push]
+
+jobs:
+  # 1️⃣ Job...
+  test:
+    # ...called...
+    name: Test
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Deps
+        run: npm ci
+      - name: Run 🏃🏾‍♂️ Unit Tests ✅
+
+        # TODO: Check if we really have to specify this flag as part of CI env.
+        # "Note that in most CI environments, this is automatically handled for you."
+        # https://jestjs.io/docs/cli#--watchall
+        run: jest --watchAll=false
+
+      - name: Run 🏃🏾‍♂️ E2E Tests ✅
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run dev
+          wait-on: "http://localhost:3000"
