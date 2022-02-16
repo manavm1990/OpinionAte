@@ -1,0 +1,23 @@
+# Workflow name
+name: Test
+
+on: [push]
+
+jobs:
+  # 1️⃣ Job...
+  test:
+    # ...called...
+    name: Test
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Deps
+        run: npm ci
+      - name: Run 🏃🏾‍♂️ Unit Tests ✅
+        run: npx jest --watchAll=false
+      - name: Run 🏃🏾‍♂️ E2E Tests ✅
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run dev
+          wait-on: "http://localhost:3000"
