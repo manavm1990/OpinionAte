@@ -15,8 +15,7 @@ jobs:
       - name: Install Deps
         run: npm ci
       - name: Run 🏃🏾‍♂️ Unit Tests ✅
-        run: jest --watchAll=false
-
+        run: npx jest --watchAll=false
       - name: Run 🏃🏾‍♂️ E2E Tests ✅
         uses: cypress-io/github-action@v2
         with:
