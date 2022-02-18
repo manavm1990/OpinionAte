@@ -1,8 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import App from "./App";
-
-const title = "🥘 OpinionAte";
+import title from "@/utils/title";
 
 describe("My Test Suite", () => {
   it("My Test Case", () => {

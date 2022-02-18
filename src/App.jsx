@@ -1,6 +1,5 @@
 import React from "react";
-
-const title = "🥘 OpinionAte";
+import title from "@/utils/title";
 
 function App() {
   React.useEffect(() => {
