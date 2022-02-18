@@ -1,7 +1,13 @@
 import React from "react";
 
+const title = "🥘 OpinionAte";
+
 function App() {
-  return <h1> Hello World! </h1>;
+  React.useEffect(() => {
+    document.title = title;
+  });
+
+  return <h1>{title}</h1>;
 }
 
 export default App;
