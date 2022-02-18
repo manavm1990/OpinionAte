@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import App from "./App";
-import title from "@/utils/title";
+import TITLE from "@/utils/title";
 
 describe("My Test Suite", () => {
   it("My Test Case", () => {
@@ -15,8 +15,8 @@ describe("App", () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it(`has title of ${title}`, () => {
+  it(`has title of ${TITLE}`, () => {
     renderer.create(<App />);
-    expect(document.title).toBe("🥘 OpinionAte");
+    expect(document.title).toBe(TITLE);
   });
 });

@@ -1,1 +1,1 @@
-export default "🥘 Opinion Ate";
+export default "🥘 OpinionAte";
